@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        "/api/copies",
+        "/api/copies/*" /* ezeket az útvonalakat kihagyja az ellenörzésből (tesztelésből) */
     ];
 }
