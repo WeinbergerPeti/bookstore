@@ -43,10 +43,10 @@ class UserController extends Controller
         $user->name=$request->name;
         $user->email=$request->email;
         $user->password = Hash::make($request->password);
-        if ($user->permission == 0)
-            $user->permission = $request->permission; //csak az admin kap engedélyt módosításra
-        else
-            $user->permission = 1;
+        // if ($user->permission == 0)
+        $user->permission = $request->permission; //csak az admin kap engedélyt módosításra
+        // else
+            // $user->permission = 1;
         $user->save();
         // return redirect('/User/list'); // átirányít a módosítás után vissza a listázó oldalra
     }
