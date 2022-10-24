@@ -5,8 +5,7 @@
     </select>
     <select name="book_id" placeholder="Book Id">
         @foreach ($books as $book)
-            <option value="{{$book->book_id}}"
-            >{{$book->title}}</option>
+            <option value="{{$book->book_id}}">{{$book->title}}</option>
         @endforeach
     </select>
     <select name="status" placeholder="Status" style="display:none">
